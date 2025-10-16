@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .header { background: #4361ee; color: white; padding: 1rem; text-align: center; }
+        .upload-section { background: white; padding: 2rem; border-radius: 8px; margin: 2rem 0; }
+        .btn { background: #4361ee; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Educational Video Platform</h1>
+        <p>Upload and share educational videos</p>
+    </div>
+    
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload Video</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="video" accept="video/*" required>
+                <button type="submit" class="btn">Upload Video</button>
+            </form>
+        </div>
+        
+        <div class="navigation">
+            <a href="/videos" class="btn">View All Videos</a>
+            <a href="/health" class="btn">Health Check</a>
+            <a href="/metrics" class="btn">Metrics</a>
+        </div>
+    </div>
+</body>
+</html>
